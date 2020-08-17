@@ -1,0 +1,9 @@
+.git
+.idea
+*.iml
+public
+node_modules
+package-lock.json
+/**/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store
