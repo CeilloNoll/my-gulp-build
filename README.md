@@ -1,4 +1,6 @@
 # Gulp сборка
+Основана на сборках от AlexxFoexx и milkamil93
+
 ### Stylus, Jade (Pug)
 ### Установка 
 Должен быть установлен (глобально) Node.js, Gulp v4.0
