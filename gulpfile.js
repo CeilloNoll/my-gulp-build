@@ -54,7 +54,7 @@ const
                 html: './app/pug/pages/*.pug',
                 styl: [
                     './app/cssjs/**/**/*.styl',
-                    '!./app/cssjs/mixins/mixins.styl'
+                    '!./app/cssjs/mixins/_*.styl'
                 ],
                 js: './app/cssjs/app.js',
                 css: [
@@ -175,7 +175,6 @@ function cssCommon() {
         .pipe(stylus({
             compress: true,
             use:[nib(), rupture()],
-            import: path.resolve('./app/cssjs/mixins/mixins.styl')
         }))
         .pipe(postcss())
         .pipe(concat('common.min.css'))
