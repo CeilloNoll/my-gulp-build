@@ -21,7 +21,7 @@ cmsTpl = '/'
 font-url(file)
 	return cmsTpl + 'css/fonts/' + file
 
-webfont(family, file, hack-chrome-windows = false, weight = normal)
+webfont(family, file, weight, hack-chrome-windows = false)
 	@font-face
 		font-family family
 		src url(font-url(file + '.eot'))
