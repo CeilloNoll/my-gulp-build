@@ -1,0 +1,25 @@
+form.modal-form
+    input(type='text' name='client_name' placeholder='Имя').form-input
+    input(type='tel' name='client_phone' placeholder='Телефон').form-input
+    | [[!SeoDomainsList?
+    |     &tplRow=`SeoDomains.City.row_select`
+    |     &tplOuter=`SeoDomains.City.outer_select`
+    |     &sortby=`city`
+    |     &sortdir=`ASC`
+    |     &activeClass=`active`
+    |     &limit=`10`
+    |     &showLog=`0`
+    | ]]
+
+    .privacy-text
+        | Нажимая кнопку отправить вы соглашаетесь с условиями <br>
+        a(data-fancybox='' data-src="#privacy_policy" href="javascript:;") политики конфиденциальности
+        | и
+        a(data-fancybox='' data-src="#personal_data" href="javascript:;") обработки персональных данныx
+    input(type='submit' value='Отправить').form-submit.btn.orng-btn.round-btn
+
+    .visually-hidden
+        input(type="text" name="phone")
+        input(type="hidden" name="form_name" value="Модальная форма").form_name
+        input(type="hidden" name="goalMetrika" value="zayavka").goalMetrika
+        input(type="hidden" name="service" value="").service-input

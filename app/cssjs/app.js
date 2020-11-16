@@ -18,8 +18,8 @@
     $(document).on('af_complete', function(event, response) {
         if (response.success) {
             var goal = response.form[0].getElementsByClassName('goalMetrika')[0].value;
-            eval('yaCounterXXXXXXX.reachGoal("'+goal+'")');
-            gtag('event', goal, {'event_category': 'category'});
+            // eval('yaCounterXXXXXXX.reachGoal("'+goal+'")');
+            // gtag('event', goal, {'event_category': 'category'});
         }
     });
 
