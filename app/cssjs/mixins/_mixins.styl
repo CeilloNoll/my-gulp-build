@@ -36,24 +36,6 @@ webfont(family, file, weight, hack-chrome-windows = false)
 				font-family family
 				src url(font-url(file + '.svg#' + family)) format('svg')
 
-min_size()
-	min-width arguments[0]
-	min-height arguments[1] || arguments[0]
-
-max_size()
-	max-width arguments[0]
-	max-height arguments[1] || arguments[0]
-
-placeholder()
-	&::-webkit-input-placeholder
-		{block}
-	&:-moz-placeholder
-		{block}
-	&::-moz-placeholder
-		{block}
-	&:-ms-input-placeholder
-		{block}
-
 .visually-hidden
 	position absolute
 	clip rect(0 0 0 0)
@@ -101,7 +83,7 @@ fillAnimationMxn()
 //normalize
 
 a
-	display block
+	display inline-block
 	text-decoration none
 	color inherit
 
