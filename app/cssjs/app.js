@@ -13,6 +13,32 @@
         }
     });
 
+    // скролл к элементу
+    $(".scroll-to").on("click", function (event) {
+        $('.mobile-menu-btn.active').click();
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 300 мс
+        $('body,html').animate({scrollTop: top - 100}, 300);
+    });
+
+    // закрытие меню при клике на оверлей
+    $('.page-overlay').click(function () {
+        $(this).fadeToggle();
+        $('.mobile-menu-btn').toggleClass('active');
+        $('.mobile-menu').toggleClass('active');
+    });
+
+    // открытие меню
+    $('.mobile-menu-btn').click(function () {
+        $('.mobile-menu-btn').toggleClass('active');
+        $('.page-overlay').fadeToggle();
+        $('.mobile-menu').toggleClass('active');
+    });
 
     /*Цели метрики*/
     $(document).on('af_complete', function(event, response) {

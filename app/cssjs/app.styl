@@ -12,5 +12,82 @@ html
 body
 	font-family 'Roboto', sans-serif
 
+.page-overlay
+	display none
+	position fixed
+	left 0
+	top 0
+	z-index 3
+	width 100%
+	height 100%
+	background hsla(0, 0%, 100%, 0.6)
+	+above(lg)
+		display none !important
+
+.mobile-menu-btn
+	size 41px
+	z-index hiLevel
+	flex-shrink 0
+	margin-left 15px
+	margin-bottom 3px
+	background url(cmsTpl + "images/svg/menu.svg") no-repeat center
+	background-size contain
+	border none
+
+	+above(lg)
+		display none
+
+	&.active
+		position relative
+		z-index tpLevel
+		background url(cmsTpl + "images/svg/close.svg") no-repeat center
+		background-size contain
+
+		+below(545px)
+			position fixed
+			right 15px
+
+	+below(xs)
+		size 32px
+
+.mobile-menu
+	position fixed
+	top 0
+	left 0
+	z-index tpLevel
+	width 50%
+	height 100vh
+	padding 100px 15px 20px
+	flex-direction column
+	background-color greyColor
+	overflow-y scroll
+	transform translateX(-100%)
+	transition .3s 0s
+
+	&.active
+		transform translateX(0)
+		box-shadow 10px 0 30px 5px rgba(95, 95, 95, 0.36)
+		+above(lg)
+			display none
+
+	&__section
+		padding 25px 15px
+		margin-bottom 30px
+		background-color white
+		border 1px solid drkColor
+		border-radius 8px
+
+	+below(lg)
+		.contacts-block
+			margin-bottom 15px
+
+	+below(sm)
+		width 60%
+
+	+below(xs)
+		width 100%
+		.connect-btn
+			width 200px
+
 .test-class
 	font bold rem(52px) / 3 'RobotoCondensed-Bold', sans-serif
