@@ -1,3 +1,18 @@
+//    фиксирование шапки сайта при скролле
+let scrollpos = window.scrollY;
+const header = document.querySelector("header");
+const header_height = header.offsetHeight;
+const add_class_on_scroll = () => header.classList.add("header-fixed");
+const remove_class_on_scroll = () => header.classList.remove("header-fixed");
+window.addEventListener('scroll', function () {
+    scrollpos = window.scrollY;
+    if (scrollpos >= 210) {
+        add_class_on_scroll()
+    } else {
+        remove_class_on_scroll()
+    }
+});
+
 ;(function ($) {
     // аттрибуты для внещних ссылок
     $('[target="_blank"]').attr('rel','noopener noreferrer');
@@ -46,6 +61,7 @@
             var goal = response.form[0].getElementsByClassName('goalMetrika')[0].value;
             // eval('yaCounterXXXXXXX.reachGoal("'+goal+'")');
             // gtag('event', goal, {'event_category': 'category'});
+            $.fancybox.close(); // закрываем fancybox после отправки
         }
     });
 
