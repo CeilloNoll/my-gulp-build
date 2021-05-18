@@ -3,9 +3,9 @@ h3 Заявка на обратный звонок с сайта <br>
 p
     b Форма:
     a(href='[[++site_url]][[~[[*id]]]]') [[+form_name:default=`Заказать звонок`]]
-|<p><b>Имя: </b>[[+client_name:notempty=`[[+client_name]]`]]</p>
-|<p><b>Телефон: </b>[[+client_phone:strip_tags=``:notempty=`<a href="tel:[[+client_phone:phone]]">[[+client_phone]]</a>`]]</p>
-|<p><b>Email: </b>[[+client_email:notempty=`[[+client_email]]`]]</p>
-|<p><b>Город: </b>[[+client_city:notempty=`[[+client_city]]`]]</p>
-|<p><b>Сообщение: </b>[[+client_message:notempty=`[[+client_message]]`]]</p>
-|<p><b>Выбранный сервис: </b>[[+service:notempty=`[[+service]]`]]</p>
+|[[+client_name:notempty=`<p><b>Имя: </b>[[+client_name]]</p>`]]
+|[[+client_phone:strip_tags=``:notempty=`<p><b>Телефон: </b><a href="tel:[[+client_phone:phone]]">[[+client_phone]]</a></p>`]]
+|[[+client_email:notempty=`<p><b>Email: </b>[[+client_email]]</p>`]]
+|[[+client_city:notempty=`<p><b>Город: </b>[[+client_city]]</p>`]]
+|[[+client_message:notempty=`<p><b>Сообщение: </b>[[+client_message]]</p>`]]
+|[[+service:notempty=`<p><b>Выбранный сервис: </b>[[+service]]</p>`]]
