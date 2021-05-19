@@ -64,8 +64,8 @@ const
                     './app/materials/fonts/**/*.{ttf,woff,woff2,svg,eot}'
                 ],
                 img: [
-                    './app/materials/images/**/*.{jpg,jpeg,png}',
-                    './app/materials/images/*.{jpg,jpeg,png}'
+                    './app/materials/images/**/*.{jpg,jpeg,png,ico}',
+                    './app/materials/images/*.{jpg,jpeg,png,ico}'
                 ],
                 svg: './app/materials/svg/*.svg',
                 svg_files: './app/materials/svg-files/*.svg',
